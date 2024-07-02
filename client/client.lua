@@ -4,7 +4,7 @@ AddEventHandler('displayInfo', function(time)
         time = time .." | © " .. Config.ServerName
     end
     if Config.ShowPlayerName then
-        time = time .. "\n" .. Config.ServerName .. ": " .. GetPlayerName(NetworkGetEntityOwner(PlayerPedId()))
+        time = time .. "\n" .. Config.PlayerName .. ": " .. GetPlayerName(NetworkGetEntityOwner(PlayerPedId()))
     end
     if Config.ShowPlayerID then
         time = time .. "\n" .. Config.PlayerID .. ": " .. GetPlayerServerId(NetworkGetEntityOwner(PlayerPedId()))
