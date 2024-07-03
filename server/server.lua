@@ -1,30 +1,6 @@
 function getDateTime()
-    if Config.ShowDateAndTime or (Config.ShowOnlyDate and Config.ShowOnlyTime) then
-        if Config.DayMonthYear then
-            return os.date("%d/%m/%Y %H:%M", os.time() + Config.TimezoneOffset * 60 * 60)
-        elseif Config.MonthDayYear then
-            return os.date("%m/%d/%Y %H:%M", os.time() + Config.TimezoneOffset * 60 * 60)
-        elseif Config.YearMonthDay then
-            return os.date("%Y/%m/%d %H:%M", os.time() + Config.TimezoneOffset * 60 * 60)
-        elseif Config.YearDayMonth then
-            return os.date("%Y/%d/%m %H:%M", os.time() + Config.TimezoneOffset * 60 * 60)
-        else
-            return os.date("%d/%m/%Y %H:%M", os.time() + Config.TimezoneOffset * 60 * 60)
-        end
-    elseif Config.ShowOnlyTime then
-        return os.date("%H:%M", os.time() + Config.TimezoneOffset * 60 * 60)
-    elseif Config.ShowOnlyDate then
-        if Config.DayMonthYear then
-            return os.date("%d/%m/%Y", os.time() + Config.TimezoneOffset * 60 * 60)
-        elseif Config.MonthDayYear then
-            return os.date("%m/%d/%Y", os.time() + Config.TimezoneOffset * 60 * 60)
-        elseif Config.YearMonthDay then
-            return os.date("%Y/%m/%d", os.time() + Config.TimezoneOffset * 60 * 60)
-        elseif Config.YearDayMonth then
-            return os.date("%Y/%d/%m", os.time() + Config.TimezoneOffset * 60 * 60)
-        else
-            return os.date("%d/%m/%Y", os.time() + Config.TimezoneOffset * 60 * 60)
-        end
+    if Config.ShowDateAndTime then
+        return os.date(Config.DateAndTimeFormat, os.time() + Config.TimezoneOffset * 60 * 60)
     else
         print('ShowDateAndTime or Config.ShowOnlyDate or Config.ShowOnlyTime must be true.')
         return os.date("%d/%m/%Y %H:%M", os.time() + Config.TimezoneOffset * 60 * 60)
