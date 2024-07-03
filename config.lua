@@ -13,25 +13,10 @@ Config.ShowPlayerID = true
 Config.PlayerID = "Player ID"
 
 
--- Any one of the following must be true from here on down.
-
 -- Show date and time
 Config.ShowDateAndTime = true
--- Show only date
-Config.ShowOnlyDate = false
--- Show only time
-Config.ShowOnlyTime = false
+Config.DateAndTimeFormat = "%Y/%m/%d %H:%M"
 
--- Any one of the following must be true from here on down.
-
--- Display in DD/MM/YYYYY format
-Config.DayMonthYear = false
--- Display in MM/DD/YYYY format
-Config.MonthDayYear = false
--- Display in YYYY/MM/DD format
-Config.YearMonthDay = true
--- Display in YYYY/DD/MM format
-Config.YearDayMonth = false
 
 --[[
 Time zone offset settings.

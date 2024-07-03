@@ -4,7 +4,7 @@ game 'gta5'
 name 'displayInfo'
 author 'syukuri'
 description 'Display of reality date and time and player ID.'
-version 'v1.0.1'
+version 'v1.1.0'
 
 server_script {
     'server/server.lua',
