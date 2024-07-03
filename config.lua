@@ -15,7 +15,7 @@ Config.PlayerID = "Player ID"
 
 -- Show date and time
 Config.ShowDateAndTime = true
-Config.DateAndTimeFormat = "%Y/%dm/%d %H:%M"
+Config.DateAndTimeFormat = "%Y/%m/%d %H:%M"
 
 
 --[[
